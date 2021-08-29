@@ -41,16 +41,13 @@ function draw() {
   leftground.show()
   rightground.show()
 
-
+if (keyWentDown("space")){
+	Matter.Body.applyForce(ball,{x:0,y:0},{x:0.08,y:-0.03})
+}
   ellipse(ball.position.x,ball.position.y,30)
 }
-function mousePressed(){
-hforce()
 
-}
-function hforce(){
-	Matter.Body.applyForce(ball,{x:0,y:0},{x:0.05,y:-0.05})
-  }
+
 
 
 
